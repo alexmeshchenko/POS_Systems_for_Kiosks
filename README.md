@@ -15,7 +15,7 @@ This repository contains comprehensive research and analysis of Point of Sale (P
 Includes workflow diagrams and integration schemes for each approach.
 
 ### 2. [iPad POS Systems for Sweden: Complete Analysis](./ipad_pos_sweden_translation.md)
-**Comprehensive technical report** (translated from Russian)
+**Comprehensive technical report**
 - Regulatory requirements (Skatteverket compliance)
 - Provider comparison (Lightspeed, Zettle, SumUp, Square, etc.)
 - Implementation recommendations
