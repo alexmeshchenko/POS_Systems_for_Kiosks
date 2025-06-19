@@ -64,15 +64,20 @@ When payments fail in self-service environments, the user experience becomes cri
 
 ## Comprehensive provider comparison and recommendations
 
-| Provider | Self-Service Support | iOS SDK Quality | Offline Capabilities | Refund Support | Hardware Cost | Transaction Fees | Key Limitations |
+| Provider | Self-Service Support | iOS SDK Quality | Offline Capabilities | Refund Support | Hardware Cost (SEK) | Transaction Fees (Sweden) | Key Limitations |
 |----------|---------------------|-----------------|---------------------|----------------|---------------|------------------|-----------------|
-| **SumUp** | ✅ Full support (dedicated kiosk solution) | ⭐⭐ Limited (fundamental cancellation flaw) | ❌ None (requires constant internet) | ⭐⭐ Basic (no real-time cancellation, 3-month limit) | 459 - 5387 SEK + VAT | 1.69% pay-as-you-go<br/>0.99% w/ plan (~256 SEK/mo) | Fatal SDK flaw: no payment cancellation<br/>No offline mode |
-| **Zettle** | ❓ Unclear (no official policy found) | ⭐⭐⭐⭐ Excellent (comprehensive SDK with cancellation) | ❌ None (requires constant internet) | ⭐⭐⭐⭐⭐ Excellent (365-day window, full/partial, programmatic) | 392 - 2011 SEK + VAT | 1.75% (no monthly fees) | No offline mode, policy uncertainty |
-| **Square** | ❌ Prohibited (attended only) | ⭐⭐⭐⭐⭐ Outstanding (4 SDK options, full cancellation) | ⭐⭐⭐⭐⭐ 24-hour offline | ⭐⭐⭐⭐⭐ Full API support | 0 - 1000 SEK + VAT | 1.75% (no monthly fees) | Strictly prohibits unattended use |
-| **Stripe Terminal** | ⚠️ Semi-attended only | ⭐⭐⭐⭐⭐ Outstanding (developer-friendly, full control) | ⭐⭐⭐⭐ Good (store-and-forward, limited preview) | ⭐⭐⭐⭐⭐ Excellent (comprehensive API, voids + refunds) | 619 - 3660 SEK (Tap to Pay = 1.05 SEK) | 1.4% + 1.35 SEK (EEA)<br/>2.9% + 1.35 SEK (non-EEA) | Requires nearby staff presence |
-| **Ingenico** | ✅ Full support | ⭐⭐⭐⭐ Good | ⭐⭐⭐⭐ Enterprise-grade | ⭐⭐⭐⭐ Enterprise support | ~2100 - 6300 SEK | Custom pricing | Higher cost, complex integration |
-| **Verifone** | ✅ Full support | ⭐⭐ Limited | ⭐⭐⭐ Standard | ⭐⭐⭐ Basic support | ~1575 - 4200 SEK | Custom pricing | Limited developer resources |
+| **SumUp** | ✅ Full support (dedicated kiosk solution) | ⭐⭐ Limited (fundamental cancellation flaw) | ❌ None (requires constant internet) | ⭐⭐ Basic (no real-time cancellation, 3-month limit) | 459 - 5387 + VAT | 1.49% base<br/>or 0.95–1.99% with ~220 SEK/mo subscription | No cancellation via SDK<br/>No offline mode |
+| **Zettle** | ❓ Unclear (no official policy found) | ⭐⭐⭐⭐ Excellent (cancellation support, mature SDK) | ❌ None (requires constant internet) | ⭐⭐⭐⭐⭐ 365-day window, full/partial refunds | 392 - 2011 + VAT | 1.85% flat (no monthly fee)<br/>Custom rates possible >100k SEK/mo | No offline mode<br/>Policy unclear for unattended use |
+| **Square** | ❌ Prohibited (attended only) | ⭐⭐⭐⭐⭐ Outstanding (4 SDK options, full cancellation) | ⭐⭐⭐⭐⭐ 24-hour offline | ⭐⭐⭐⭐⭐ Full API support | — (not sold in Sweden) | ❌ Not available in Sweden | Strictly prohibits unattended use |
+| **Stripe Terminal** | ⚠️ Semi-attended only | ⭐⭐⭐⭐⭐ Outstanding (developer-friendly, full control) | ⭐⭐⭐⭐ Good (store-and-forward, limited preview) | ⭐⭐⭐⭐⭐ Excellent (comprehensive API, voids + refunds) | 619 - 3660 (Tap to Pay +1.05 SEK) | 1.4% + 1.00 SEK (EEA)<br/>2.9% + 1.00 SEK (non-EEA)<br/>+1.05 SEK Tap to Pay | Semi-attended only<br/>Offline mode not fully public |
+| **Ingenico** | ✅ Full support | ⭐⭐⭐⭐ Good | ⭐⭐⭐⭐ Enterprise-grade | ⭐⭐⭐⭐ Enterprise support | ~2100 - 6300 | Custom pricing (depends on acquirer/partner) | Expensive, needs bank/acquirer contract |
+| **Verifone** | ✅ Full support | ⭐⭐ Limited | ⭐⭐⭐ Standard | ⭐⭐⭐ Basic support | ~1575 - 4200 | Custom pricing (depends on acquirer/partner) | Limited developer docs<br/>No open pricing |
 
+\* Values + VAT mean that 25% value added tax should be added at the final calculation.
+
+** Zettle is PayPal Sweden, and offers you the possibility to make contract bets starting from >100,000 SEK per month.
+
+*** Stripe Terminal: If you use Tap to Pay, the fee is increased by 1.05 SEK for each authorization.
 
 
 A comprehensive analysis of SumUp, Zettle, Square, and Stripe Terminal reveals significant differences in pricing, capabilities, and policies that directly impact implementation decisions for different business models.
@@ -142,3 +147,4 @@ For **self-service or unattended applications**, **only SumUp provides compliant
 For **developer-intensive integrations**, Stripe Terminal and Square offer the most comprehensive documentation and API coverage, though Stripe's higher transaction fees may impact total cost of ownership.
 
 The **offline requirement serves as a decisive factor**, immediately eliminating SumUp and Zettle for businesses requiring offline transaction capabilities, regardless of other advantages.
+
