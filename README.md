@@ -27,6 +27,12 @@ Includes workflow diagrams and integration schemes for each approach.
 - Top 3 provider analysis
 - Implementation recommendations by business size
 
+### 4. [Payment Terminal Providers and Self-Service Operations](./terminal_providers_analysis.md)
+**Provider policy and capability comparison**
+- Explicit support status for self-service kiosks
+- Offline and refund limitations
+- SumUp vs. Verifone vs. Ingenico
+
 ## 🎯 Key Findings
 
 ### Best Solutions for Swedish Kiosks:
@@ -35,7 +41,9 @@ Includes workflow diagrams and integration schemes for each approach.
 |----------|----------|----------------|
 | **Zettle** | Small-medium restaurants | Native Swedish integration, Swish support, SDK access |
 | **Lightspeed** | Large restaurants/chains | Advanced features, comprehensive management |
-| **SumUp** | Lean setups | Developer-friendly SDK, fast onboarding |
+| **SumUp** | Lean setups with kiosk variant | Developer-friendly SDK (limited), dedicated kiosk support |
+> 🔍 *Note:* While SumUp provides a kiosk-specific solution, **Ingenico** and **Verifone** offer full support for unattended kiosks via their specialized hardware lines.
+
 
 ### Critical Requirements:
 - ✅ Swedish market compliance (Skatteverket)
@@ -83,6 +91,10 @@ Swedish Banks (SEB, Nordea, etc.)
 ## 🎯 Use Case
 
 This research supports iOS application development for iPad-based kiosks requiring payment terminal integration in the Swedish market.
+
+## 📑 Related Documents
+
+- [Payment Terminal Providers and Self-Service Operations](./terminal_providers_analysis.md): in-depth comparison of self-service capabilities across hardware providers.
 
 ---
 
